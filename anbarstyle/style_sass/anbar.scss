@@ -1,0 +1,284 @@
+@import "responsive";
+@import "variable";
+@import "mixin";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    letter-spacing: .5px;
+    word-spacing: 1px;
+    outline: none;
+    border: none;
+    color: $white;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    background-color: $midnigthblue;
+}
+///////header///////
+.header-info{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 0px;
+    background-color: $headercolor;
+}
+.title-header{
+    @include txt($bigsize,$white,$lighter);
+    margin-right: 15px;
+}
+.number-box-header{
+    @include numberbox;
+}
+///////header///////
+
+
+
+///////main///////
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 45px 0px;
+}
+
+.container-main{
+   width: 530px;
+}
+    
+    
+
+.main-box{
+    margin: 15px 0px;
+}
+
+
+.title-category{
+    @include txt($bigsize,$white,$bold);
+}
+.title-make-product{
+    @include txt($bigsize,$white,$bold);
+}
+.title-list-product{
+    @include txt($bigsize,$white,$bold);
+
+}   
+.category{
+    @include input_container(column);
+    display: none;
+    transition: all .3s ease-in-out;
+}
+
+ 
+
+.category-body{
+    @extend %mainbox;
+}
+.make-product-body{
+    @extend %mainbox;
+}
+.list-product-body{
+    @extend %mainbox;
+    background-color: transparent;
+    padding: 0px;
+    margin: 15px 0px 0px 0px;
+}
+    
+
+
+.showing-category{
+    @include txt($smallsize,$darkgray,$lighter);
+    cursor: pointer;
+}
+    
+
+
+    
+
+////////////////////////
+.title-form-category{
+    @include input_container(column);
+    margin-bottom: 15px;
+}
+.label-title-category{
+    @include txt($smallsize,$brightgray,$lighter);
+    margin-bottom: 7px;
+}
+#input-title-category{
+    @include input(35%);
+}
+/////////////////////////
+
+///////////////////////////
+.description-form-category{
+    @include input_container(column);
+    width: 100%;
+    margin-bottom: 15px;
+}
+.label-description-category{
+    @include txt($smallsize,$brightgray,$lighter);
+    margin-bottom: 7px;
+}
+.textarea-description-category{
+    @include input(100%);
+    resize: vertical;
+}
+//////////////////////////
+.add-cancel-form-category{
+
+    @include input_container(row);
+
+    & .btn-add-category{
+        
+        @include input(calc(50% - 7px));
+        background-color: $gray;
+        margin-left: 7px;
+        border: none;
+    }
+        
+    & .btn-cancel-category{
+        @include input(50%);
+        background-color: transparent;
+    }
+    & button{
+        cursor: pointer;
+          
+    }
+}
+
+.title-form-make-product{
+    @include input_container(column);
+    margin-bottom: 15px;
+}
+.label-title-make-product{
+    @include txt($smallsize,$brightgray,$lighter);
+    margin-bottom: 7px;
+}
+#input-title-make-product{
+    @include input(35%);
+}  
+.quantity-form-make-product{
+    @include input_container(column);
+    margin-bottom: 15px;
+}
+.label-quantity-make-product{
+    @include txt($smallsize,$brightgray,$lighter);
+    margin-bottom: 7px;
+}
+#input-quantity-make-product{
+    @include input(35%);
+}
+.category-form-make-product{
+    @include input_container(column);
+    margin-bottom: 15px;
+}
+.label-category-make-product{
+    @include txt($smallsize,$brightgray,$lighter);
+    margin-bottom: 7px;
+}
+#input-category-make-product{
+    
+    @include input(100%);
+    color: $darkgray;
+    & option{
+        background-color: $gray;
+        border: none;
+    }
+    
+}
+.btn-form-make-product{
+    @include input(100%);
+    background-color: $gray;
+    border: none;
+    cursor: pointer;
+}  
+   
+.search-list-product{
+    @include input_container(row);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.label-search-list-product{
+    @include txt($middlesize,$darkgray,$lighter);
+}
+#input-search-list-product{
+    @include input(185px);
+}
+.sort-list-product{
+    @include input_container(row);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.label-sort-list-product{
+    @include txt($middlesize,$darkgray,$lighter);
+}
+#input-sort-list-product{
+    @include input(159px);
+    color: $darkgray;
+    & option{
+        background-color: $gray;
+        border: none;
+    }
+}
+.list{
+    @include input_container(row);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid $darkgray;
+    margin-bottom: 5px;
+    .list-name{
+        @include txt($middlesize,$brightgray,$lighter);
+        margin-right: 50px;
+    }
+    .list-info{
+        @include input_container(row);
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 10px 0px;
+    }  
+    .time-list-info{
+        @include txt($smallsize,$brightgray,$lighter);
+        margin-right: 10px;
+    }
+    .numberbox-list-info{
+        @include txt($smallsize,$white,$lighter);
+        @include numberbox;
+        margin-right: 10px;
+    }
+    .category-list-info{
+        @include txt($smallsize,$brightgray,$lighter);
+        @include input_list($brightgray);
+        margin-right: 10px;
+    }
+    .delete-list-info{
+        @include txt($smallsize,$danger_red,$lighter);
+        @include input_list($danger_red);
+        cursor: pointer;
+        background-color: transparent;
+    }
+}
+.search-list-category{
+    @include input_container(row);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.label-search-list-category{
+    @include txt($middlesize,$darkgray,$lighter);
+}
+#input-search-list-category{
+    @include input(159px);
+    color: $darkgray;
+    & option{
+        background-color: $gray;
+        border: none;
+    }
+}
+///////main///////
+@include responsivepage;
+    

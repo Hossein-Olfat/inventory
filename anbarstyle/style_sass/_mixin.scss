@@ -1,0 +1,55 @@
+@mixin txt($size,$color,$weight){
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    
+}
+@mixin numberbox{
+    color: $white;
+    padding: 4.5px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray;
+    border-radius: 50%;
+    border: 2px solid $white;
+}
+@mixin input($width){
+    width: $width;
+    padding: 8px 10px;
+    border: 1px solid $darkgray;
+    border-radius:8px;
+    background-color: transparent;
+    color: $white;
+    font-size: $smallsize;
+    caret-color: $darkgray;
+}
+@mixin input_list($color){
+    border: 1px solid $color;
+    border-radius: 16px;
+    padding: 4.5px 10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+@mixin input_container($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+%mainbox{
+    width: 100%;
+    margin: 7px 0px 0px 0px;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: $cloudblue;
+    display: flex;
+    flex-direction: column;
+}   
+
+    
+
+    
+    
+
+    

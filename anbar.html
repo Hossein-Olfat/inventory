@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./anbarstyle/style/anbar.css">
+    
+    <title>anbardari</title>
+</head>
+<body>
+    <header>
+        
+        <div class="header-info">
+            <p class="title-header">inventory App with sass & js</p>
+
+            <div class="number-box-header">7</div>
+        </div>
+
+    </header>
+
+    
+    <main>
+
+        <section class="container-main">
+
+
+            <!--category-->
+            <section class="category main-box">
+                <p class="title-category">Add new category</p>
+                <div class="category-body">
+                    <form class="form-category" action="#">
+
+                        <div class="title-form-category">
+                            <label class="label-title-category" for="input-title-category">title</label>
+                            <input type="text"id="input-title-category">
+                        </div>
+                        <div class="description-form-category">
+                            <label class="label-description-category" for="input-description-category">description</label>
+                            <textarea id="input-description-category" class="textarea-description-category" cols="30" rows="4"></textarea>
+                        </div>
+
+                        <div class="add-cancel-form-category">
+                            <button type="submit" class="btn-cancel-category">Cancel</button>
+                            <button type="submit" class="btn-add-category">Add Category</button>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+            <p class="showing-category">Add new category ?</p>
+            <!--category-->
+
+
+            <!--make-product-->
+            <section class="make-product main-box">
+                <p class="title-make-product">Add new product</p>
+                <div class="make-product-body">
+                    <form class="form-make-product" action="#">
+
+                        <div class="title-form-make-product">
+                            <label class="label-title-make-product" for="input-title-make-product">title</label>
+                            <input type="text"id="input-title-make-product">
+                        </div>
+
+                        <div class="quantity-form-make-product">
+                            <label class="label-quantity-make-product" for="input-quantity-make-product">quantity</label>
+                            <input type="number"id="input-quantity-make-product">
+                        </div>
+
+                        <div class="category-form-make-product">
+                            <label class="label-category-make-product" for="input-category-make-product">category</label>
+
+                            <select id="input-category-make-product">
+                                <option value="select-category">select category</option>
+                                <option value="frontend">frontend</option>
+                                <option value="backend">backend</option>
+                                <option value="IOS">IOS</option>
+                                <option value="Linox">Linox</option>
+                                
+                            </select>
+                        </div>
+
+                        <button class="btn-form-make-product" type="submit">Add new product</button>
+
+                    </form>
+
+                </div>
+            </section>
+            <!--make-product-->
+
+
+            <!--list-product-->
+            <section class="list-product main-box">
+                <p class="title-list-product">Product list</p>
+                <div class="list-product-body">
+                    <div class="list-product-body-container">
+                        
+                        <div class="search-list-category">
+                            <label class="label-search-list-category" for="input-search-list-category">category</label>
+                            <select id="input-search-list-category">
+                                <option value="select-category">select category</option>
+                                <option value="frontend">frontend</option>
+                                <option value="backend">backend</option>
+                                <option value="IOS">IOS</option>
+                                <option value="Linox">Linox</option>
+                            </select>
+                        </div>
+
+                        <div class="search-list-product">
+                            <label class="label-search-list-product" for="input-search-list-product">search</label>
+                            <input type="search" id="input-search-list-product">
+                        </div>
+                        <div class="sort-list-product">
+                            <label class="label-sort-list-product" for="input-sort-list-product">sort</label>
+                            <select id="input-sort-list-product">
+                                <option value="default">default</option>
+                                <option value="newest">newest</option>
+                                <option value="oldest">oldest</option>
+                                <option value="most">most</option>
+                                <option value="least">least</option>
+                                
+                            </select>
+                        </div>
+                        
+                        <ul class="lists-container">
+                            <!-- <li class="list">
+                                <span class="list-name">next js</span>
+                                <div class="list-info">
+                                    <time class="time-list-info">1401/07/01</time>
+                                    <div class="category-list-info">frontend</div>
+                                    <div class="numberbox-list-info">4</div>
+                                    <button type="submit" class="delete-list-info">delete</button>
+                                </div>
+                            </li> -->
+                            
+                            
+                        </ul>        
+                                
+
+                        
+                        
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+            <!--list-product-->
+
+
+        </section>
+
+    </main>
+
+
+<script src="./main_dynamic/anbar.js"></script>
+
+</body>
+</html>

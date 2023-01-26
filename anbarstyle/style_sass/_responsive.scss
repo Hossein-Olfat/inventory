@@ -1,0 +1,17 @@
+@mixin responsivepage{
+
+    @media screen and ( max-width:576px ){
+        .container-main{
+            width: 90%;
+        }
+        #input-title-category,#input-title-make-product,#input-quantity-make-product{
+            width: 175px;
+        }
+        
+    }
+   
+}
+            
+            
+           
+    
