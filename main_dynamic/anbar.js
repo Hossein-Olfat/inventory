@@ -365,7 +365,9 @@ class Stoarage{
       
     static getcategories_storage(container){
        const categoriesall =JSON.parse( localStorage.getItem("categories") );
-       categorylist=[...categoriesall];
+       console.log(categoriesall);
+       categorylist=categoriesall ? [...categoriesall] : categorylist ;
+       
        container.forEach((each_container)=>{
            CategoryUi.showCategoryDoM(each_container);
         });
@@ -403,8 +405,8 @@ id=Number(Stoarage.get_id_showcategory());
 
 // document 
 document.addEventListener("DOMContentLoaded",()=>{
-
     Stoarage.getcategories_storage([category_product,searchlist_category]);
+    Stoarage.savecategories_storage();
     Stoarage.getproduct_storage();
     
 });
