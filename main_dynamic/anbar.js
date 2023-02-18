@@ -170,6 +170,7 @@ class Product {
                 this.category_choose=event.target.value;
             }else{
                 this.category_choose=undefined;
+                return null;
             }
         });
                 
@@ -443,28 +444,28 @@ function _date(_time){
 
 
 
-let x =[0,0,5];
-function clock(){
+// let x =[0,0,5];
+// function clock(){
     
-    x[2]--;    
-    for(let i=x.length;i>0;i--){
-        if(x[0]===0 && x[1]===0 && x[2]===-1){
+//     x[2]--;    
+//     for(let i=x.length;i>0;i--){
+//         if(x[0]===0 && x[1]===0 && x[2]===-1){
             
-            x[0]=0;
-            x[1]=0;
-            x[2]=0;
-            console.log("ended time");
+//             x[0]=0;
+//             x[1]=0;
+//             x[2]=0;
+//             console.log("ended time");
             
-        }else if(x[i]===-1){
+//         }else if(x[i]===-1){
             
-            x[i]=59;
-            x[i-1]-=1;
-        }
-    }
+//             x[i]=59;
+//             x[i-1]-=1;
+//         }
+//     }
     
-    console.log(x[0] +" : "+x[1]+" : "+x[2]);
+//     console.log(x[0] +" : "+x[1]+" : "+x[2]);
     
-}
+// }
 
 // let abcd=["name : Hossein","age : 19","country : IRAN","job : developer"];
 // let i =1000;
@@ -507,27 +508,24 @@ function clock(){
 
 // const m =[1,2,3,4,5];
 
-let names = ["Ray", "Robert", "Marie", "Frank", "Deborah"];
-let count = 0;
+// let names = ["Ray", "Robert", "Marie", "Frank", "Deborah"];
+// let count = 0;
 
-function cycleArray() {
-    if(names[count]){
+// function cycleArray() {
+//     if(names[count]){
 
-        let name = names[count];
-        console.log(name);
+//         let name = names[count];
+//         console.log(name);
         
-        count++;
+//         count++;
         
-    }
+//     }
         
 
-  if (count === names.length) {
+//   if (count === names.length) {
     
-    count = 0;
-}
+//     count = 0;
+// }
 
-}
-
-//setInterval(cycleArray,1000);
-
+// }
 
